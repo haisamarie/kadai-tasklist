@@ -23,14 +23,14 @@ import javax.persistence.Table;
             )
 })
 
-@Table(name = "messages")
+@Table(name = "tasks")
 public class Message {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title", length = 255, nullable = false)
+    @Column(name = "title", length = 255, nullable = true)
     private String title;
 
     @Column(name = "content", length = 255, nullable = false)

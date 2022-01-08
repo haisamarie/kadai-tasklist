@@ -56,7 +56,7 @@ public class CreateServlet extends HttpServlet {
             if(errors.size() > 0) {
                 em.close();
 
-                // フォームに初期値を設定、さらにエラーメッセージを送る
+                // フォームに初期値を設定、さらにエラータスクを送る
                 request.setAttribute("_token", request.getSession().getId());
                 request.setAttribute("message", m);
                 request.setAttribute("errors", errors);
